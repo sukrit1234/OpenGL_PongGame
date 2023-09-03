@@ -66,11 +66,11 @@ You will see folder levels and in the folder has "level1.json" this is scene lev
 	  <li> <b>PlankBarIncreaseValue</b> - Width that append to plank when it is collected</li>
 	  <li> <b>PlankBarIncreaseColor</b> - Color of PlankBarIncrease collectable</li>
 	  <li> <b>PlankBarIncreaseChanceToSpawn</b> - Chance to be spawned (0.0 - 1.0)</li>
-	  <li> <b>PlankBarDecreaseWidth , <b>PlankBarDecreaseHeight</b> - Size of PlankBarDecrease collectable</li>
+	  <li> <b>PlankBarDecreaseWidth</b> , <b>PlankBarDecreaseHeight</b> - Size of PlankBarDecrease collectable</li>
 	  <li> <b>PlankBarDecreaseValue</b> - Width that subtract from plank when it is collected</li>
 	  <li> <b>PlankBarDecreaseColor</b> - Color of PlankBarDecrease collectable</li>
 	  <li> <b>PlankBarDecreaseChanceToSpawn</b> - Chance to be spawned (0.0 - 1.0)</li>
-	  <li> <b>ShuffleBoxWidth , <b>ShuffleBoxHeight</b> - Size of ShuffleBox collectable</li>
+	  <li> <b>ShuffleBoxWidth</b> , <b>ShuffleBoxHeight</b> - Size of ShuffleBox collectable</li>
 	  <li> <b>ShuffleBoxSpeedUpValue</b> - Speed that append to ball when it is collected</li>
 	  <li> <b>ShuffleBoxColor</b> - Color of ShuffleBox collectable</li>
 	  <li> <b>ShuffleBoxChanceToSpawn</b> - Chance to be spawned (0.0 - 1.0)</li>
