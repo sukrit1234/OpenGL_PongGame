@@ -14,13 +14,13 @@
 	"ScoreForBounceBoundary" : 1,
 	"ScoreForBouncePlank" : 2,
 	
-	"MinWaitTimeToSpawnCollectable" : 3.0,
-	"MaxWaitTimeToSpawnCollectable" : 10.0,
+	"MinWaitTimeToSpawnCollectable" : 1.0,
+	"MaxWaitTimeToSpawnCollectable" : 2.0,
 
 	"CoinRadius" : 20.0,
 	"CoinColor" : {"R" : 1.0,"G": 0.647,"B": 0.0,"A": 1.0},
 	"CoinRewardScore" : 1,
-	"CoinChanceToSpawn" : 0.5,
+	"CoinChanceToSpawn" : 0.2,
 
 	"BallSpeedUpRadius" : 20.0,
 	"BallSpeedUpColor"  : {"R" : 1.0,"G": 0.0,"B": 0.0,"A": 1.0},
@@ -30,17 +30,23 @@
 	"BallSlowDownRadius" : 20.0,
 	"BallSlowDownColor" : {"R" : 0.0,"G": 1.0,"B": 0.0,"A": 1.0},
 	"BallSlowDownValue" : 50.0,
-	"BallSlowDownChanceToSpawn" : 0.5,
+	"BallSlowDownChanceToSpawn" : 0.3,
 
 	"PlankBarIncreaseWidth" : 40.0,
 	"PlankBarIncreaseHeight" : 40.0,
 	"PlankBarIncreaseColor" : {"R" : 0.0,"G": 1.0,"B": 0.0,"A": 1.0},
 	"PlankBarIncreaseValue" : 10.0,
-	"PlankBarIncreaseChanceToSpawn" : 0.5,
+	"PlankBarIncreaseChanceToSpawn" : 0.3,
 
 	"PlankBarDecreaseWidth" : 40.0,
 	"PlankBarDecreaseHeight" : 40.0,
 	"PlankBarDecreaseColor" : {"R" : 1.0,"G": 0.647,"B": 0.0,"A": 1.0},
-	"PlankBarDecreaseValue" : 10.0
+	"PlankBarDecreaseValue" : 10.0,
 	"PlankBarDecreaseChanceToSpawn" : 0.5,
+
+	"ShuffleBoxWidth" : 40.0,
+	"ShuffleBoxHeight" : 40.0,
+	"ShuffleBoxColor" : {"R" : 1.0,"G": 0.0,"B": 1.0,"A": 1.0},
+	"ShuffleBoxSpeedUpValue" : 10.0,
+	"ShuffleBoxChanceToSpawn" : 1.0,
 }
