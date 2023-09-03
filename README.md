@@ -152,3 +152,19 @@ Properties in this file is cleary self explanation so It's easy to modify
     "PauseKey" : "f",
 }
 ```
+## Implementation detail
+### Include Library
+  + OpenGL - use via gl,glu and glut to draw 2D element and front text
+  + SDL    - use for Input event polling
+### Game try point.
+At [**TestOpenGL.cpp**](https://github.com/sukrit1234/OpenGL_PongGame/blob/main/TestOpenGL.cpp) file will see this.
+```
+int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
+{
+    UBounceBallApp App;
+    App.Start("level1");
+    return 0;
+}
+```
+The game is encapsulate in class UBounceBallApp and it's simple run with Start() function and pass level config file. Level config that I mention earlier it allow creator can adjust and custom some logic for BounceBall game.
+*** UBounceBallApp will read gameconfig.json and apply settings to application preferences.
