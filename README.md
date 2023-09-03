@@ -258,3 +258,4 @@ This still not flexible but very easy enough to add new type of collectable and 
  + Use CCD collision check for Ball for much more quality physics.
  + Add sound effect , texture instead of solid color
  + Rework design pattern that make new collectable type easier and more flexible.
+ + Fine tune for collectable spawn location more equal sparse.
