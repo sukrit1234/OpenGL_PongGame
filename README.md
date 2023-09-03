@@ -32,8 +32,8 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
 You will see folder levels and in the folder has "level1.json" this is scene level file in json format. let's see the file.
 ```
 {
-  "BallSpeed" : 500,
-	"BallRadius" : 10.0,
+	"BallSpeed" : 500,
+        "BallRadius" : 10.0,
 	"BallColor" : {"R" : 1.0,"G": 1.0,"B": 1.0,"A": 1.0},
 
 	"PlankSpeed" : 500,
@@ -84,6 +84,18 @@ You will see folder levels and in the folder has "level1.json" this is scene lev
 	"ShuffleBoxChanceToSpawn" : 1.0,
 }
 ```
-Let see explanation of each properties.
-
- 
+Let's see each properties
+  + BallSpeed - Ball initial speed
+  + BallRadius - Ball radius
+  + BallColor - Ball color
+  + PlankSpeed - Plank max move speed
+  + PlankWidth - Plank width unit
+  + PlankHeight - Plank height unit
+  + PlankCOlor - Plank fill color in RGBA format (0.0 - 1.0)
+  + BackgroundColor - Color of Level background in RGB format
+  + ForegroundColor - Color of Text display during game. (Not include Game Over and Pause menu)
+  + ScoreForBounceBoundary - Score that player will gain when ball bounce with boundary
+  + ScoreForBouncePlank    - Score that player will gain when ball bounce with plank
+  + MinWaitTimeToSpawnCollectable - Minimum time variant that wait next collectable will be spawned (in seconds)
+  + MaxWaitTimeToSpawnCollectable - Maximum time variant that wait next collectable will be spawned (in seconds)
+  + 
