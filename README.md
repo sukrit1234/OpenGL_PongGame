@@ -28,7 +28,12 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
 	return 0;
 }
 ```
-## Level Config
+## Configuration
+This project contain 2 categories configuration "Level Config" and "App Config"
++ Level Config - Scene config that allow to adjust logic and in-game appearance
++ App config - config application preference and inputs such as input keys , screen size.
+    
+### Level Config
 You will see folder levels and in the folder has "level1.json" this is scene level file in json format. let's see the file.
 <details>
   <summary>See descrion of each properties</summary>
@@ -126,3 +131,24 @@ You will see folder levels and in the folder has "level1.json" this is scene lev
 }
 ```
 
+### App Config
+You will see file gameconfig.json  let's see the file.
+Properties in this file is cleary self explanation so It's easy to modify
+```
+{
+    "GameTitle" : "Bounce Ball The Game",
+    "ScoreLabel" : "Your Score : (%d)",
+    "ContinueKeyLabel" : "Press '%s' To Continue",
+    "PauseKeyLabel" : "Press '%s' To Pause Game",
+    "GameOverLabel" : "GAME OVER",
+    "PauseLabel" : "GAME PAUSED 222",
+    "ScreenWidth"  : 1000,
+    "ScreenHeight" : 1000,
+    "MoveLeftKey" : "a",
+    "MoveRightKey" : "d",
+    "MoveUpKey" : "w",
+    "MoveDownKey" : "s",
+    "ContinueKey" : "r",
+    "PauseKey" : "f",
+}
+```
