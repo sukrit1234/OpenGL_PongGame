@@ -88,6 +88,12 @@ struct FBoundBallLevelConfiguation {
 	float PlankBarDecreaseValue; //Bar width that append to plank when collected
 	float PlankBarDecreaseChanceToSpawn;  //Chance to spawn (0.0 never , 1.0 always)
 
+	float ShuffleBoxWidth; //Width
+	float ShuffleBoxHeight;//Height
+	FLinearColor ShuffleBoxColor; //Color
+	float ShuffleBoxSpeedUpValue; //Ball will increase speed when collected.
+	float ShuffleBoxChanceToSpawn;  //Chance to spawn (0.0 never , 1.0 always)
+
 	static FBoundBallLevelConfiguation Load(std::string Levelname);
 
 	float SampleNextCollectableSpawnTime() const;

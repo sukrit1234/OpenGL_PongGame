@@ -135,6 +135,18 @@ protected:
 	float Value = 10.0f;
 };
 
+class UShuffleBox : public URectangleObject, public IBounceBallCollectable
+{
+public:
+	UShuffleBox(const FBoundBallLevelConfiguation& Config);
+
+protected:
+
+	virtual void OnCollected(UPlayer* Player, UBall* Ball, UControlPlank* Plank) override;
+	virtual bool IsOverlap(const FSphere& BallSphere) const override;
+	float Value = 10.0f;
+};
+
 class UCollectableSpawner;
 
 typedef UGameObject* (UCollectableSpawner::*FCollectableSpawnFunc)(const FBoundBallLevelConfiguation& Config);
@@ -170,4 +182,5 @@ protected:
 	UGameObject* SpawnBallSlowDown(const FBoundBallLevelConfiguation& Config);
 	UGameObject* SpawnPlankBarIncrease(const FBoundBallLevelConfiguation& Config);
 	UGameObject* SpawnPlankBarDecrease(const FBoundBallLevelConfiguation& Config);
+	UGameObject* SpawnShuffleBox(const FBoundBallLevelConfiguation& Config);
 };

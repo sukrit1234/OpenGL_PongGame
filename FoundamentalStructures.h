@@ -68,7 +68,7 @@ struct FLinearColor {
 	static FLinearColor Blue;
 	static FLinearColor Green;
 	static FLinearColor Yellow;
-
+	static FLinearColor Magenta;
 	//100 % , 100 % , 0 %
 };
 

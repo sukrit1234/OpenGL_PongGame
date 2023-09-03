@@ -10,6 +10,7 @@ FLinearColor FLinearColor::Orange = FLinearColor(1.0f, 0.647f, 0.0f, 1.0f);
 FLinearColor FLinearColor::Blue = FLinearColor(0.0f, 0.0f, 1.0f, 1.0f);
 FLinearColor FLinearColor::Green = FLinearColor(0.0f, 1.0f, 0.0f, 1.0f);
 FLinearColor FLinearColor::Yellow = FLinearColor(1.0f, 1.0f, 0.0f, 1.0f);
+FLinearColor FLinearColor::Magenta = FLinearColor(1.0f, 0.0f, 1.0f, 1.0f);
 
 FVector2 FVector2::Zero = FVector2(0.0f, 0.0f);
 FVector2 FVector2::One = FVector2(1.0f, 1.0f);

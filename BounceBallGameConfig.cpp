@@ -137,11 +137,17 @@ FBoundBallLevelConfiguation FBoundBallLevelConfiguation::Load(std::string Leveln
 		Config.PlankBarIncreaseValue = get_float_field(loadedJson, "PlankBarIncreaseValue", 10.0f);
 		Config.PlankBarIncreaseChanceToSpawn = get_float_field(loadedJson, "PlankBarIncreaseChanceToSpawn", 0.5f);
 
-		Config.PlankBarDecreaseWidth = get_float_field(loadedJson, "PlankBarDecreaseWidth", 40.0f);
+		Config.PlankBarDecreaseWidth = get_float_field(loadedJson, "PlankBarDecreaseWidth", 10.0f);
 		Config.PlankBarDecreaseHeight = get_float_field(loadedJson, "PlankBarDecreaseHeight", 40.0f);
 		Config.PlankBarDecreaseColor = get_color_field(loadedJson, "PlankBarDecreaseColor",FLinearColor::Orange);
 		Config.PlankBarDecreaseValue = get_float_field(loadedJson, "PlankBarDecreaseValue", 10.0f);
 		Config.PlankBarDecreaseChanceToSpawn = get_float_field(loadedJson, "PlankBarDecreaseChanceToSpawn", 0.5f);
+
+		Config.ShuffleBoxWidth = get_float_field(loadedJson, "ShuffleBoxWidth", 10.0f);
+		Config.ShuffleBoxHeight = get_float_field(loadedJson,"ShuffleBoxHeight", 50.0f);
+		Config.ShuffleBoxColor = get_color_field(loadedJson, "ShuffleBoxColor", FLinearColor::Magenta);
+		Config.ShuffleBoxSpeedUpValue = get_float_field(loadedJson, "ShuffleBoxSpeedUpValue", 10.0f);
+		Config.ShuffleBoxChanceToSpawn = get_float_field(loadedJson, "ShuffleBoxChanceToSpawn", 0.5f);
 	}
 	return Config;
 }

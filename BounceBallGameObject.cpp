@@ -146,6 +146,28 @@ bool UPlankBarDecrease::IsOverlap(const FSphere& BallSphere) const
 }
 
 
+UShuffleBox::UShuffleBox(const FBoundBallLevelConfiguation& Config)
+{
+	SetColor(Config.ShuffleBoxColor);
+	SetSize(FVector2(Config.ShuffleBoxWidth, Config.ShuffleBoxHeight));
+	Value = Config.ShuffleBoxSpeedUpValue;
+}
+void UShuffleBox::OnCollected(UPlayer* Player, UBall* Ball, UControlPlank* Plank)
+{
+	if (Ball != nullptr) {
+		FVector2 Linear = Ball->GetLinearVelocity();
+		float Length = Linear.Length();
+		
+		FVector2 NewDirection = FVector2::RanomConeDirection(FVector2::Down, 1.22173048f);
+		Ball->SetLinearVelocity(NewDirection*(Length + Value));
+	}
+}
+bool UShuffleBox::IsOverlap(const FSphere& BallSphere) const
+{
+	return Box.IsOverlap(BallSphere);
+}
+
+
 UGameObject* FCollectionSpawner::Spawn(UCollectableSpawner& Spawner, const FBoundBallLevelConfiguation& Config) {
 	
 	float random_val = (float)rand() / (float)RAND_MAX;
@@ -161,7 +183,8 @@ void UCollectableSpawner::Initialize(const FBoundBallLevelConfiguation& Config)
 	_spawners.push_back(FCollectionSpawner(Config.BallSlowDownChanceToSpawn, &UCollectableSpawner::SpawnBallSlowDown));
 	_spawners.push_back(FCollectionSpawner(Config.PlankBarIncreaseChanceToSpawn, &UCollectableSpawner::SpawnPlankBarIncrease));
 	_spawners.push_back(FCollectionSpawner(Config.PlankBarDecreaseChanceToSpawn, &UCollectableSpawner::SpawnPlankBarDecrease));
-
+	_spawners.push_back(FCollectionSpawner(Config.ShuffleBoxChanceToSpawn, &UCollectableSpawner::SpawnShuffleBox));
+	
 	auto rng = std::default_random_engine{};
 	std::shuffle(std::begin(_spawners), std::end(_spawners), rng);
 	LastSpawnIndex = -1;
@@ -200,4 +223,8 @@ UGameObject* UCollectableSpawner::SpawnPlankBarIncrease(const FBoundBallLevelCon
 UGameObject* UCollectableSpawner::SpawnPlankBarDecrease(const FBoundBallLevelConfiguation& Config)
 {
 	return new UPlankBarDecrease(Config);
+}
+UGameObject* UCollectableSpawner::SpawnShuffleBox(const FBoundBallLevelConfiguation& Config)
+{
+	return new UShuffleBox(Config);
 }
