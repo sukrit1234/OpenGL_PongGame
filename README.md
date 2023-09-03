@@ -133,7 +133,9 @@ You will see folder levels and in the folder has "level1.json" this is scene lev
 
 ### App Config
 You will see file gameconfig.json  let's see the file.
-Properties in this file is cleary self explanation so It's easy to modify
+Properties in this file is cleary self explanation so It's easy to modify. 
+Because of limit of time , I can't implement UI framework in time (Although using library or from scratch) so At this time only change option in config file.
+and the input key configuration still limit for only ascii keyboard keycode.
 ```
 {
     "GameTitle" : "Bounce Ball The Game",
@@ -231,4 +233,21 @@ bool UTheBomb::IsOverlap(const FSphere& BallSphere) const
 }
 
 ```
-and then implment method SpawnTheBomb 
+and then implment method SpawnTheBomb in UCollectableSpawner class
+
+```
+UGameObject* UCollectableSpawner::SpawnTheBomb(const FBoundBallLevelConfiguation& Config)
+{
+	return new UTheBomb(Config);
+}
+```
+and add spawn method for UTheBomb in UCollectableSpawner::Initialize()
+```
+void UCollectableSpawner::Initialize(const FBoundBallLevelConfiguation& Config)
+{
+	// Chance to spawn the bomb is 85% (0.85) and SpawnTheBomb is spawn function
+	_spawners.push_back(FCollectionSpawner(0.85, &UCollectableSpawner::SpawnTheBomb));
+}
+```
+This still not flexible but very easy enough to add new type of collectable and logic without touching with game app.
+
