@@ -1,0 +1,16 @@
+{
+    "GameTitle" : "Bounce Ball The Game",
+    "ScoreLabel" : "Your Score : (%d)",
+    "ContinueKeyLabel" : "Press '%s' To Continue",
+    "PauseKeyLabel" : "Press '%s' To Pause Game",
+    "GameOverLabel" : "GAME OVER",
+    "PauseLabel" : "GAME PAUSED 222",
+    "ScreenWidth"  : 1000,
+    "ScreenHeight" : 1000,
+    "MoveLeftKey" : "a",
+    "MoveRightKey" : "d",
+    "MoveUpKey" : "w",
+    "MoveDownKey" : "s",
+    "ContinueKey" : "r",
+    "PauseKey" : "f",
+}
