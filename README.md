@@ -14,4 +14,4 @@ I define some collectable that use in game. It's collected by ball overlap it.
   + BallSlowDown (Green Circle) - Decrease ball speed by X unit , player will play easier (Unit will config in Level Config)
   + PlankBarIncrease (Green Square) - Increase plank bar width by X unit , player will play easier (Unit will config in Level Config)
   + PlankBarDecrease  (Red Square) - Decrease plank bar width by X unit , player will play harder (Unit will config in Level Config)
-  + ShuffleBox (Purple Box)  - Random change velocity of ball but still same speed.
+  + ShuffleBox (Purple Box)  - Random and change ball direction and increase velocity by X Unit (Unit will config in Level Config)
