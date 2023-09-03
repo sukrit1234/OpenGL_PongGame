@@ -251,7 +251,7 @@ void UCollectableSpawner::Initialize(const FBoundBallLevelConfiguation& Config)
 ```
 This still not flexible but very easy enough to add new type of collectable and logic without touching with game app.
 
-## Many things must be improve
+## Many things must be improved
  + UI for application configuarion instead of directly modify to json file.
  + UI for creator to adjust level config.
  + Next level after clear current level , It's simple by implement next level to level config file and goal score. When player gain to goal score the game will load next level file.
