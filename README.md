@@ -9,9 +9,9 @@
 ### Collectables 
 ![plot](https://github.com/sukrit1234/ObjectManager_ECS/blob/main/Output_ECS.png)
 I define some collectable that use in game. It's collected by ball overlap it.
-  + Coin - player will get more score. (Score can config in Level config)
-  + BallSpeedUp  - Increase ball speed by X unit , player will play harder (Unit will config in Level Config)
-  + BallSlowDown - Decrease ball speed by X unit , player will play easier (Unit will config in Level Config)
-  + PlankBarIncrease - Increase plank bar width by X unit , player will play easier (Unit will config in Level Config)
-  + PlankBarDecrease - Decrease plank bar width by X unit , player will play harder (Unit will config in Level Config)
-
+  + Coin (Orange Circle) - player will get more score. (Score can config in Level config)
+  + BallSpeedUp (Red Circle) - Increase ball speed by X unit , player will play harder (Unit will config in Level Config)
+  + BallSlowDown (Green Circle) - Decrease ball speed by X unit , player will play easier (Unit will config in Level Config)
+  + PlankBarIncrease (Green Square) - Increase plank bar width by X unit , player will play easier (Unit will config in Level Config)
+  + PlankBarDecrease  (Red Square) - Decrease plank bar width by X unit , player will play harder (Unit will config in Level Config)
+  + ShuffleBox (Purple Box)  - Random change velocity of ball but still same speed.
