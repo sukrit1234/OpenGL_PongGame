@@ -110,4 +110,15 @@ Let's see each properties
   + BallSlowDownColor - Color of BallSpeedUp collectable
   + BallSlowdownValue - Speed that subtract from ball when it is collected
   + BallSpeedUpChanceToSpawn - Chance to be spawned (0.0 - 1.0)
-    
+  + PlankBarIncreaseWidth , PlankBarIncreaseHeight - Size of PlankBarIncrease collectable
+  + PlankBarIncreaseValue - Width that append to plank when it is collected
+  + PlankBarIncreaseColor - Color of PlankBarIncrease collectable
+  + PlankBarIncreaseChanceToSpawn - Chance to be spawned (0.0 - 1.0)
+  + PlankBarDecreaseWidth , PlankBarDecreaseHeight - Size of PlankBarDecrease collectable
+  + PlankBarDecreaseValue - Width that subtract from plank when it is collected
+  + PlankBarDecreaseColor - Color of PlankBarDecrease collectable
+  + PlankBarDecreaseChanceToSpawn - Chance to be spawned (0.0 - 1.0)
+  + ShuffleBoxWidth , ShuffleBoxHeight - Size of ShuffleBox collectable
+  + ShuffleBoxSpeedUpValue - Speed that append to ball when it is collected
+  + ShuffleBoxColor - Color of ShuffleBox collectable
+  + ShuffleBoxChanceToSpawn - Chance to be spawned (0.0 - 1.0)
