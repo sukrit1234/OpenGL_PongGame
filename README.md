@@ -30,6 +30,47 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
 ```
 ## Level Config
 You will see folder levels and in the folder has "level1.json" this is scene level file in json format. let's see the file.
+<details>
+  <summary>See descrion of each properties</summary>
+	  <li><b>BallSpeed</b> - Ball initial speed</li>
+	  <li> <b>BallRadius</b> - Ball radius</li>
+	  <li> <b>BallColor</b> - Ball color</li>
+	  <li> <b>PlankSpeed</b> - Plank max move speed</li>
+	  <li> <b>PlankWidth</b> - Plank width unit</li>
+	  <li> <b>PlankHeight</b> - Plank height unit</li>
+	  <li> <b>PlankCOlor</b> - Plank fill color in RGBA format (0.0 - 1.0)</li>
+	  <li> <b>BackgroundColor</b> - Color of Level background in RGB format</li>
+	  <li> <b>ForegroundColor</b> - Color of Text display during game. (Not include Game Over and Pause menu)</li>
+	  <li> <b>ScoreForBounceBoundary</b> - Score that player will gain when ball bounce with boundary</li>
+	  <li> <b>ScoreForBouncePlank</b>    - Score that player will gain when ball bounce with plank</li>
+	  <li> <b>MinWaitTimeToSpawnCollectable</b> - Minimum time variant that wait next collectable will be spawned (in seconds)</li>
+	  <li> <b>MaxWaitTimeToSpawnCollectable</b> - Maximum time variant that wait next collectable will be spawned (in seconds)</li>
+	  <li> <b>CoinRadius</b> - Radius of coin collectable</li>
+	  <li> <b>CoinColor</b> - Color of coin collectable</li>
+	  <li> <b>CoinRewardScore</b> - Score that player will gain when it is collected</li>
+	  <li> <b>CoinChanceToSpawn</b> - Chance to be spawned (0.0 - 1.0)</li>
+	  <li> <b>BallSpeedUpRadius</b> - Radius of BallSpeedUp collectable</li>
+	  <li> <b>BallSpeedUpColor</b> - Color of BallSpeedUp collectable</li>
+	  <li> <b>BallSpeedUpValue</b> - Speed that append to ball when it is collected</li>
+	  <li> <b>BallSpeedUpChanceToSpawn</b> - Chance to be spawned (0.0 - 1.0)</li>
+	  <li> <b>BallSlowDownRadius</b> - Radius of BallSpeedUp collectable</li>
+	  <li> <b>BallSlowDownColor</b> - Color of BallSpeedUp collectable</li>
+	  <li> <b>BallSlowdownValue</b> - Speed that subtract from ball when it is collected</li>
+	  <li> <b>BallSpeedUpChanceToSpawn</b> - Chance to be spawned (0.0 - 1.0)</li>
+	  <li> <b>PlankBarIncreaseWidth</b> , <b>PlankBarIncreaseHeight</b> - Size of PlankBarIncrease collectable</li>
+	  <li> <b>PlankBarIncreaseValue</b> - Width that append to plank when it is collected</li>
+	  <li> <b>PlankBarIncreaseColor</b> - Color of PlankBarIncrease collectable</li>
+	  <li> <b>PlankBarIncreaseChanceToSpawn</b> - Chance to be spawned (0.0 - 1.0)</li>
+	  <li> <b>PlankBarDecreaseWidth , <b>PlankBarDecreaseHeight</b> - Size of PlankBarDecrease collectable</li>
+	  <li> <b>PlankBarDecreaseValue</b> - Width that subtract from plank when it is collected</li>
+	  <li> <b>PlankBarDecreaseColor</b> - Color of PlankBarDecrease collectable</li>
+	  <li> <b>PlankBarDecreaseChanceToSpawn</b> - Chance to be spawned (0.0 - 1.0)</li>
+	  <li> <b>ShuffleBoxWidth , <b>ShuffleBoxHeight</b> - Size of ShuffleBox collectable</li>
+	  <li> <b>ShuffleBoxSpeedUpValue</b> - Speed that append to ball when it is collected</li>
+	  <li> <b>ShuffleBoxColor</b> - Color of ShuffleBox collectable</li>
+	  <li> <b>ShuffleBoxChanceToSpawn</b> - Chance to be spawned (0.0 - 1.0)</li>
+</details>
+
 ```
 {
 	"BallSpeed" : 500,
@@ -84,41 +125,4 @@ You will see folder levels and in the folder has "level1.json" this is scene lev
 	"ShuffleBoxChanceToSpawn" : 1.0,
 }
 ```
-Let's see each properties
-  + BallSpeed - Ball initial speed
-  + BallRadius - Ball radius
-  + BallColor - Ball color
-  + PlankSpeed - Plank max move speed
-  + PlankWidth - Plank width unit
-  + PlankHeight - Plank height unit
-  + PlankCOlor - Plank fill color in RGBA format (0.0 - 1.0)
-  + BackgroundColor - Color of Level background in RGB format
-  + ForegroundColor - Color of Text display during game. (Not include Game Over and Pause menu)
-  + ScoreForBounceBoundary - Score that player will gain when ball bounce with boundary
-  + ScoreForBouncePlank    - Score that player will gain when ball bounce with plank
-  + MinWaitTimeToSpawnCollectable - Minimum time variant that wait next collectable will be spawned (in seconds)
-  + MaxWaitTimeToSpawnCollectable - Maximum time variant that wait next collectable will be spawned (in seconds)
-  + CoinRadius - Radius of coin collectable
-  + CoinColor - Color of coin collectable
-  + CoinRewardScore - Score that player will gain when it is collected
-  + CoinChanceToSpawn - Chance to be spawned (0.0 - 1.0)
-  + BallSpeedUpRadius - Radius of BallSpeedUp collectable
-  + BallSpeedUpColor - Color of BallSpeedUp collectable
-  + BallSpeedUpValue - Speed that append to ball when it is collected
-  + BallSpeedUpChanceToSpawn - Chance to be spawned (0.0 - 1.0)
-  + BallSlowDownRadius - Radius of BallSpeedUp collectable
-  + BallSlowDownColor - Color of BallSpeedUp collectable
-  + BallSlowdownValue - Speed that subtract from ball when it is collected
-  + BallSpeedUpChanceToSpawn - Chance to be spawned (0.0 - 1.0)
-  + PlankBarIncreaseWidth , PlankBarIncreaseHeight - Size of PlankBarIncrease collectable
-  + PlankBarIncreaseValue - Width that append to plank when it is collected
-  + PlankBarIncreaseColor - Color of PlankBarIncrease collectable
-  + PlankBarIncreaseChanceToSpawn - Chance to be spawned (0.0 - 1.0)
-  + PlankBarDecreaseWidth , PlankBarDecreaseHeight - Size of PlankBarDecrease collectable
-  + PlankBarDecreaseValue - Width that subtract from plank when it is collected
-  + PlankBarDecreaseColor - Color of PlankBarDecrease collectable
-  + PlankBarDecreaseChanceToSpawn - Chance to be spawned (0.0 - 1.0)
-  + ShuffleBoxWidth , ShuffleBoxHeight - Size of ShuffleBox collectable
-  + ShuffleBoxSpeedUpValue - Speed that append to ball when it is collected
-  + ShuffleBoxColor - Color of ShuffleBox collectable
-  + ShuffleBoxChanceToSpawn - Chance to be spawned (0.0 - 1.0)
+
