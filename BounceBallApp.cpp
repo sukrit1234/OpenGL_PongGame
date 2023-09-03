@@ -78,6 +78,11 @@ void UBounceBallApp::CheckBallHitWithPlank(float deltaTime)
 			FVector2 RelfectVel = TheBall->GetLinearVelocity().Reflect(ImpactNormal);
 
 			TheBall->SetLocation(ImpactPoint + ImpactNormal * BallSphere.Radius);
+			
+			float Speed = RelfectVel.Length();
+			RelfectVel += ControlledPlank->GetLinearVelocity();
+			RelfectVel = RelfectVel.GetNormalize()*Speed;
+
 			TheBall->SetLinearVelocity(RelfectVel);
 			DoCaptureBounce(LevelConfig.ScoreForBouncePlank);
 		}
@@ -193,22 +198,27 @@ void UBounceBallApp::Update(float deltaTime)
 	if (Player.IsGameOver() || Player.IsPaused())
 		return;
 
-	for (size_t i = 0; i < AllObjects.size(); i++) {
-		if (AllObjects[i] != nullptr)
-			AllObjects[i]->Update(deltaTime);
-	}
-
-	CheckBallHitWithPlank(deltaTime);
-	CheckHitWithCollectables(deltaTime);
-
-	bool bHitGround = false;
-	if (CheckBallBounceScreenBound(bHitGround))
+	/*Use for iteration*/
+	float timeStep = deltaTime * 0.25f;
+	for (int step = 0; step < 4; step++)
 	{
-		if (bHitGround)
-			Player.MarkAsGameOver();
-		else
-			DoCaptureBounce(LevelConfig.ScoreForBounceBoundary);
+		for (size_t i = 0; i < AllObjects.size(); i++) {
+			if (AllObjects[i] != nullptr)
+				AllObjects[i]->Update(timeStep);
+		}
+		CheckBallHitWithPlank(timeStep);
+		CheckHitWithCollectables(timeStep);
+
+		bool bHitGround = false;
+		if (CheckBallBounceScreenBound(bHitGround))
+		{
+			if (bHitGround)
+				Player.MarkAsGameOver();
+			else
+				DoCaptureBounce(LevelConfig.ScoreForBounceBoundary);
+		}
 	}
+
 
 	TimepassForCollectableSpawn += deltaTime;
 	if (TimepassForCollectableSpawn > WaitTimeForNextCollectable) {

@@ -147,6 +147,9 @@ protected:
 	float Value = 10.0f;
 };
 
+
+
+
 class UCollectableSpawner;
 
 typedef UGameObject* (UCollectableSpawner::*FCollectableSpawnFunc)(const FBoundBallLevelConfiguation& Config);
@@ -165,6 +168,7 @@ struct FCollectionSpawner {
 	}
 	UGameObject* Spawn(UCollectableSpawner& Spawner, const FBoundBallLevelConfiguation& Config);
 };
+
 
 class UCollectableSpawner
 {

@@ -1,6 +1,7 @@
 #pragma once
 
 #define SMALL_NUMBER (1.e-8f)
+
 struct FVector2
 {
 	float X;
@@ -43,7 +44,6 @@ struct FVector2
 	static FVector2 Up;
 	static FVector2 Down;
 };
-
 struct FLinearColor {
 	float R;
 	float G;
@@ -71,7 +71,6 @@ struct FLinearColor {
 	static FLinearColor Magenta;
 	//100 % , 100 % , 0 %
 };
-
 struct FSphere
 {
 	float Radius;
