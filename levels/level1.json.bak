@@ -1,0 +1,46 @@
+{
+	"BallSpeed" : 500,
+	"BallRadius" : 10.0,
+	"BallColor" : {"R" : 1.0,"G": 1.0,"B": 1.0,"A": 1.0},
+
+	"PlankSpeed" : 500,
+	"PlankWidth" : 200.0,
+	"PlankHeight" : 20.0,
+	"PlankColor" : {"R" : 1.0,"G": 1.0,"B": 1.0,"A": 1.0},
+	
+	"BackgroundColor" : {"R" : 0.0,"G": 0.0,"B": 1.0,"A": 1.0},
+	"ForegroundColor" : {"R" : 0.0,"G": 1.0,"B": 1.0,"A": 1.0},
+
+	"ScoreForBounceBoundary" : 1,
+	"ScoreForBouncePlank" : 2,
+	
+	"MinWaitTimeToSpawnCollectable" : 3.0,
+	"MaxWaitTimeToSpawnCollectable" : 10.0,
+
+	"CoinRadius" : 20.0,
+	"CoinColor" : {"R" : 1.0,"G": 0.647,"B": 0.0,"A": 1.0},
+	"CoinRewardScore" : 1,
+	"CoinChanceToSpawn" : 0.5,
+
+	"BallSpeedUpRadius" : 20.0,
+	"BallSpeedUpColor"  : {"R" : 1.0,"G": 0.0,"B": 0.0,"A": 1.0},
+	"BallSpeedUpValue" : 50.0,
+	"BallSpeedUpChanceToSpawn" : 0.5,
+
+	"BallSlowDownRadius" : 20.0,
+	"BallSlowDownColor" : {"R" : 0.0,"G": 1.0,"B": 0.0,"A": 1.0},
+	"BallSlowDownValue" : 50.0,
+	"BallSlowDownChanceToSpawn" : 0.5,
+
+	"PlankBarIncreaseWidth" : 40.0,
+	"PlankBarIncreaseHeight" : 40.0,
+	"PlankBarIncreaseColor" : {"R" : 0.0,"G": 1.0,"B": 0.0,"A": 1.0},
+	"PlankBarIncreaseValue" : 10.0,
+	"PlankBarIncreaseChanceToSpawn" : 0.5,
+
+	"PlankBarDecreaseWidth" : 40.0,
+	"PlankBarDecreaseHeight" : 40.0,
+	"PlankBarDecreaseColor" : {"R" : 1.0,"G": 0.647,"B": 0.0,"A": 1.0},
+	"PlankBarDecreaseValue" : 10.0
+	"PlankBarDecreaseChanceToSpawn" : 0.5,
+}
