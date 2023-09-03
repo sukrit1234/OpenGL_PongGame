@@ -167,4 +167,68 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
 }
 ```
 The game is encapsulate in class UBounceBallApp and it's simple run with Start() function and pass level config file. Level config that I mention earlier it allow creator can adjust and custom some logic for BounceBall game.
+
 *** UBounceBallApp will read gameconfig.json and apply settings to application preferences.
+You can duplicate level1.json in levels folder and rename to otherlevel.json and modify the config and can start BoundBall game with another logic.
+```
+int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
+{
+    UBounceBallApp App;
+    App.Start("otherlevel");
+    return 0;
+}
+```
+### Add New type collectables
+If I need to add bomb when Ball overlap Bomb ball speed will increase in opposite direction. Let's do it.
+
+Open [**BounceBallGameObject.h**](https://github.com/sukrit1234/OpenGL_PongGame/blob/main/BounceBallGameObject.h)
+and add class.
+```
+class UTheBomb : public USphereObject, public IBounceBallCollectable
+{
+public:
+     UTheBomb(const FBoundBallLevelConfiguation& Config);
+protected:
+	virtual void OnCollected(UPlayer* Player, UBall* Ball, UControlPlank* Plank) override;
+	virtual bool IsOverlap(const FSphere& BallSphere) const override;
+	float Impulse = 500.0f;
+};
+```
+and add method SpawnTheBomb in UCollectableSpawner class
+
+```
+class UCollectableSpawner
+{
+	//...
+	UGameObject* SpawnTheBomb(const FBoundBallLevelConfiguation& Config);
+};
+```
+
+
+Open [**BounceBallGameObject.cpp**](https://github.com/sukrit1234/OpenGL_PongGame/blob/main/BounceBallGameObject.cpp)
+and implement UTheBomb class
+```
+UTheBomb::UTheBomb(const FBoundBallLevelConfiguation& Config)
+{
+    //Define color
+    SetColor(FLinearColor(1.0f,1.0f,0.0f,1.0f));
+    SetRadius(50.0f); //Define radius of Bomb
+    Value = 100.0f; //Define impulse of Bomb
+}
+void UTheBomb::OnCollected(UPlayer* Player, UBall* Ball, UControlPlank* Plank)
+{
+	if (Ball != nullptr) {
+		FVector2 ImpulseDirection = (Ball->GetCenter() - GetCenter()).GetNormalize();
+		FVector2 Linear = Ball->GetLinearVelocity();
+		Linear += ImpulseDirection * Value;
+		Ball->SetLinearVelocity(Linear);
+	}
+}
+bool UTheBomb::IsOverlap(const FSphere& BallSphere) const
+{
+   /*Just call overlap sphere*/
+   return Sphere.IsOverlap(BallSphere);
+}
+
+```
+and then implment method SpawnTheBomb 
