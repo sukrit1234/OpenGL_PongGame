@@ -156,7 +156,7 @@ Properties in this file is cleary self explanation so It's easy to modify
 ### Include Library
   + OpenGL - use via gl,glu and glut to draw 2D element and front text
   + SDL    - use for Input event polling
-### Game try point.
+### Game Entry point.
 At [**TestOpenGL.cpp**](https://github.com/sukrit1234/OpenGL_PongGame/blob/main/TestOpenGL.cpp) file will see this.
 ```
 int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
