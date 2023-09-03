@@ -98,4 +98,16 @@ Let's see each properties
   + ScoreForBouncePlank    - Score that player will gain when ball bounce with plank
   + MinWaitTimeToSpawnCollectable - Minimum time variant that wait next collectable will be spawned (in seconds)
   + MaxWaitTimeToSpawnCollectable - Maximum time variant that wait next collectable will be spawned (in seconds)
-  + 
+  + CoinRadius - Radius of coin collectable
+  + CoinColor - Color of coin collectable
+  + CoinRewardScore - Score that player will gain when it is collected
+  + CoinChanceToSpawn - Chance to be spawned (0.0 - 1.0)
+  + BallSpeedUpRadius - Radius of BallSpeedUp collectable
+  + BallSpeedUpColor - Color of BallSpeedUp collectable
+  + BallSpeedUpValue - Speed that append to ball when it is collected
+  + BallSpeedUpChanceToSpawn - Chance to be spawned (0.0 - 1.0)
+  + BallSlowDownRadius - Radius of BallSpeedUp collectable
+  + BallSlowDownColor - Color of BallSpeedUp collectable
+  + BallSlowdownValue - Speed that subtract from ball when it is collected
+  + BallSpeedUpChanceToSpawn - Chance to be spawned (0.0 - 1.0)
+    
